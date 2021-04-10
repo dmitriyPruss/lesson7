@@ -1,41 +1,84 @@
+body{
+    --card-width: 300px;
+    --main-color: rgb(86,49,112);
+}
+
 *{
     box-sizing: border-box;
     margin:0;
     padding:0;
-}
-
-.parent{
-    border: 5px solid blue;
-    background-color: aqua;
-    height: 100vh;
+    font-family: sans-serif;
 }
 
 .flexContainer{
+    height:100vh;
+    background-color: chocolate;
+
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    /* flex-direction: row-reverse; */
-    /* flex-wrap: wrap;  */
-    flex-flow: column wrap;
-    align-content: flex-start;
 }
 
-.child{
-    border: 5px solid orange;
-    background-color: rgb(241,241,194);
-    margin: 5px;
-    /* min-width: 250px;
-    max-width: 350px; */
-    /* width: 555px; */
-    /* height:150px; */
+.cardContainer{
+    width: var(--card-width);
+    height: calc(var(--card-width) * 1.5);
+    background-color: aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.flexContainer > div{
-    flex-basis: 70px;
-    /* white-space: nowrap; */
-    /* flex-shrink: 1; */
-    /* flex-grow: 1; */
+.topCardBackground{
+    background-color: var(--main-color);
+    width: 100%;
+    height: calc(var(--card-width) * 0.45); 
 }
 
+.userProfileImage{
+    width: calc(var(--card-width) * 0.5);
+    /* height: calc(var(--card-width) * 0.5); */
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-top: calc(var(--card-width) * (-0.25));
+    overflow: hidden;
+}
 
+.userProfileImage > img{
+    object-fit: cover;
+    width:100%;
+    height: 100%;
+}
 
+.userName, .userPosition{
+    color: var(--main-color);
+    padding: 6px;
+}
+
+.userPosition{
+    color: var(--main-color);
+    padding: 6px;
+}
+
+.userInfo{
+    padding: 6px;
+    text-align: center;
+}
+
+.socialLinks{
+    margin-top: auto;
+    display: flex;
+    width: 100%;
+}
+
+.socialLinks > div{
+    width: 50%;
+    padding: 5px;
+    border-top: 1px solid grey;
+    text-align: center;
+}
+
+.gitHubLink{
+    border-left: 1px solid grey;
+}
