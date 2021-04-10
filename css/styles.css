@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+.parent{
+    border: 5px solid blue;
+    background-color: aqua;
+    height: 100vh;
+}
+
+.flexContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex-direction: row-reverse; */
+    /* flex-wrap: wrap;  */
+    flex-flow: column wrap;
+    align-content: flex-start;
+}
+
+.child{
+    border: 5px solid orange;
+    background-color: rgb(241,241,194);
+    margin: 5px;
+    /* min-width: 250px;
+    max-width: 350px; */
+    /* width: 555px; */
+    /* height:150px; */
+}
+
+.flexContainer > div{
+    flex-basis: 70px;
+    /* white-space: nowrap; */
+    /* flex-shrink: 1; */
+    /* flex-grow: 1; */
+}
+
+
+
